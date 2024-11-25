@@ -1,5 +1,5 @@
 # React + Vite + Tailwind
-https://nickop22.github.io/mamamia-react-hito1-tailwind/
+https://nickop22.github.io/mamamia-react-tailwind/
 
 Proyecto inicial del modulo de React con Desafio Latam
 hito 1: Creación de proyecto utilizando estructura basica de Reac con JS
