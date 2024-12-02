@@ -7,13 +7,15 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Login from "./components/Login.jsx";
 import Registro from "./components/Registro.jsx";
+import CartPizza from "./components/CartPizza.jsx";
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      {/* <Home />
       <Registro />
-      <Login />
+      <Login /> */}
+      <CartPizza />
       <Footer />
     </>
   );
