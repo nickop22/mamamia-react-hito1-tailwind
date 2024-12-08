@@ -8,14 +8,16 @@ import Footer from "./components/Footer";
 import Login from "./components/Login.jsx";
 import Registro from "./components/Registro.jsx";
 import CartPizza from "./components/CartPizza.jsx";
+import Pizza from "./components/Pizza.jsx";
 function App() {
   return (
     <>
       <Navbar />
       {/* <Home />
-      <Registro />
-      <Login /> */}
-      <CartPizza />
+       <Registro />
+      <Login />
+      <CartPizza /> */}
+      <Pizza />
       <Footer />
     </>
   );
