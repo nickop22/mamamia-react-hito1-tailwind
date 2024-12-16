@@ -1,12 +1,13 @@
 import { Disclosure } from "@headlessui/react";
 import { Button } from "@material-tailwind/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Profile", href: "#", current: false },
-  { name: "LogOut🔓", href: "#", current: false },
-  { name: "Login🔐", href: "#", current: false },
-  { name: "Registro", href: "#", current: false },
+  { name: "Profile", to: "/profile", current: false },
+  { name: "LogOut🔓", to: "#", current: false },
+  { name: "Login🔐", to: "/login", current: false },
+  { name: "Registro", to: "/registro", current: false },
 ];
 
 function classNames(...classes) {
@@ -41,20 +42,19 @@ export default function Navbar() {
               {/* Texto fijo "Mamma Mia" */}
               <span className="text-white text-lg font-bold">Mamma Mia</span>
               {/* Botón Home siempre visible */}
-              <Button
-                href="#"
+              <Link
+                to="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
               >
                 Home 🍕
-              </Button>
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {filteredNavigation.map((item) => (
-                  <Button
+                  <Link
                     key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? "page" : undefined}
+                    to={item.to}
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
@@ -70,16 +70,19 @@ export default function Navbar() {
                     }
                   >
                     {item.name}
-                  </Button>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             {/* Botón Total siempre visible */}
-            <Button className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+            <Link
+              to="/CartPizza"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >
               Total: {total.toLocaleString()}🛒
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
